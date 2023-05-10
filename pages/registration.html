@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration Page</title>
+		<meta name="author" content="AJS"/>
+		<meta name="keywords" content="GPU, CPU, shopping, online shopping"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../styles/stylespare.css">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<script src="https://kit.fontawesome.com/005fba01e9.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="banner">
+			<header>
+				<img class="logo" src="../src/logo.png"/>
+					<nav class="navigation-bar">
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="products.html">Products</a></li>
+							<li><a class="active" href=" ">Registration</a></li>
+							<li><a href="references.html">References</a></li>
+						</ul>
+					</nav>
+			</header>
+			
+			<div class="center">
+				<h1>Sign Up</h1>
+				<form method="post" action="products.html">
+					<div class="txt_field">
+						<input type="text" required>
+						<span></span>
+						<label>Full Name</label>
+					</div>
+					<div class="txt_field">
+						<input type="text" required>
+						<span></span>
+						<label>Email</label>
+					</div>
+					<div class="txt_field">
+						<input type="password" id="password" required>
+						<span class="eye" onclick="showPass()">
+							<i class="fa fa-eye" id = "showpassword"></i>
+							<i class="fa fa-eye-slash" id = "hidepassword"></i>
+						</span>
+						<span></span>
+						<label>Password</label>
+					</div>
+					<div class="txt_field">
+						<input type="password" id="confirmpassword" required>
+						<span class="eye" onclick="showConfirmPass()">
+							<i class="fa fa-eye" id = "showconfirmpassword"></i>
+							<i class="fa fa-eye-slash" id = "hideconfirmpassword"></i>
+						</span>
+						<span></span>
+						<label>Confirm Password</label>
+					</div>
+					<input type="submit" value="Login">
+					<div class="newsletter">
+						Sign up for a newsletter now!
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<script>
+			function showPass(){
+				var x = document.getElementById("password");
+				var y = document.getElementById("showpassword");
+				var z = document.getElementById("hidepassword");
+				
+				if(x.type === 'password'){
+					x.type = "text";
+					y.style.display = "block";
+					z.style.display = "none";
+				}
+				else{
+					x.type = "password";
+					y.style.display = "none";
+					z.style.display = "block";
+				}
+				
+			}
+
+			function showConfirmPass(){
+				var x = document.getElementById("confirmpassword");
+				var y = document.getElementById("showconfirmpassword");
+				var z = document.getElementById("hideconfirmpassword");
+				
+				if(x.type === 'password'){
+					x.type = "text";
+					y.style.display = "block";
+					z.style.display = "none";
+				}
+				else{
+					x.type = "password";
+					y.style.display = "none";
+					z.style.display = "block";
+				}
+				
+			}
+		</script>
+		
+		<footer>
+			<div class="footerContainer">
+				<div class="socialIcons">
+					<a href=""><i class="fa-brands fa-facebook"></i></a>
+					<a href=""><i class="fa-brands fa-instagram"></i></i></a>
+					<a href=""><i class="fa-brands fa-youtube"></i></a>
+					<a href=""><i class="fa-brands fa-tiktok"></i></a>
+				</div>
+				
+				<div class="footerNav">
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href=" ">Registration</a></li>
+						<li><a href="references.html">References</a></li>
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div class="footerBottom">
+				<p>Developed by <span class="designer">AJS</p>
+			</div>
+			
+		</footer>
+	
+	</body>
+
+</html>
